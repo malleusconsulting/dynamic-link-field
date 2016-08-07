@@ -32,9 +32,9 @@
   </properties>
 
   <scm>
-    <connection>scm:git:git://github.com/malleusconsulting/dynamic-link-field-module.git</connection>
-    <developerConnection>scm:git:git@github.com:malleusconsulting/dynamic-link-field-module.git</developerConnection>
-    <url>https://github.com/malleusconsulting/dynamic-link-field-module</url>
+    <connection>scm:git:git://github.com/malleusconsulting/dynamic-link-field.git</connection>
+    <developerConnection>scm:git:git@github.com:malleusconsulting/dynamic-link-field.git</developerConnection>
+    <url>https://github.com/malleusconsulting/dynamic-link-field</url>
     <tag>HEAD</tag>
   </scm>
 
