@@ -11,12 +11,6 @@ On initialisation, triggered by opening a dialog containing the new field, the a
 
 Where no node type is specified, the field defaults to `mgnl:page`, meeting the primary use case described above.
 
-```xml
-<sv:node sv:name="workbench">
-  <sv:property sv:name="class" sv:type="String">
-    <sv:value>uk.co.malleusconsulting.magnolia.apps.extended.workbench.ExtendedWorkbench</sv:value>
-  </sv:property>
-  <sv:property sv:name="dropConstraintClass" sv:type="String">
-    <sv:value>uk.co.malleusconsulting.magnolia.apps.extended.workbench.tree.drop.MaximumDepthDropConstraint</sv:value>
-  </sv:property>
-```
+An example of an STK teaser dialog reconfigured to use the DynamicLinkField is shown below.
+
+<img src="https://raw.githubusercontent.com/malleusconsulting/dynamic-link-field/gh_pages/stk_teaser_dialog_with_dynamiclinkfield.png" width="829" height="310" title="Dialog using a dynamic link field" />
