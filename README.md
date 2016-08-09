@@ -4,6 +4,17 @@ This modules adds an additional link field that can dynamically discover the nod
 
 The primary use case for this field is where an editor is configuring a page that should only link to content from a certain area of the website. For example, a category landing page which highlights items beneath it in the website tree.
 
+##Installation
+This module is available from [the central Maven repository](http://repo1.maven.org/maven2/uk/co/malleusconsulting/magnolia/ui/form/dynamic-link-field-module/1.0.0/) and can be installed using:
+
+```xml
+<dependency>
+  <groupId>uk.co.malleusconsulting.magnolia.ui.form</groupId>
+  <artifactId>dynamic-link-field-module</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
+
 ##Usage
 The field type is `uk.co.malleusconsulting.magnolia.ui.form.field.definition.DynamicLinkFieldDefinition` and introduces an additional property, `targetRootNodeType`.
 
