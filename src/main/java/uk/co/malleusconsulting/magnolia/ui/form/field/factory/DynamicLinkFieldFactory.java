@@ -55,7 +55,8 @@ public class DynamicLinkFieldFactory<D extends FieldDefinition> extends
 				componentProvider);
 		super.getFieldDefinition().setTargetTreeRootPath(
 				findTargetTreeRootPath(relatedFieldItem,
-						definition.getTargetRootNodeType()));
+						definition.getTargetRootNodeType(),
+						definition.isIncludeSelf()));
 	}
 
 	/**
@@ -67,11 +68,21 @@ public class DynamicLinkFieldFactory<D extends FieldDefinition> extends
 	 *            The node being edited
 	 * @param targetNodeType
 	 *            The type of node to look up the tree for
+	 * @param includeSelf
+	 *            Is the node being edited a valid root if it matches the
+	 *            template type?
 	 * @return
 	 */
 	private String findTargetTreeRootPath(JcrNodeAdapter relatedFieldItem,
-			String targetNodeType) {
+			String targetNodeType, boolean includeSelf) {
+
 		try {
+			if (includeSelf
+					&& NodeUtil.isNodeType(relatedFieldItem.getJcrItem(),
+							targetNodeType)) {
+				return relatedFieldItem.getJcrItem().getPath();
+			}
+
 			Node rootNode = NodeUtil.getNearestAncestorOfType(
 					relatedFieldItem.getJcrItem(), targetNodeType);
 			return rootNode == null ? null : rootNode.getPath();

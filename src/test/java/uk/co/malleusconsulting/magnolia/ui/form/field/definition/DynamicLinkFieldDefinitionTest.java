@@ -38,4 +38,17 @@ public class DynamicLinkFieldDefinitionTest {
 		testDefinition.setTargetRootNodeType(aNewType);
 		assertThat(testDefinition.getTargetRootNodeType(), is(aNewType));
 	}
+
+	@Test
+	public void shouldDefaultToNotIncludingSelf() {
+		DynamicLinkFieldDefinition testDefinition = new DynamicLinkFieldDefinition();
+		assertThat(testDefinition.isIncludeSelf(), is(false));
+	}
+
+	@Test
+	public void shouldAllowOverwritingOfDefaultToNotIncludeSelf() {
+		DynamicLinkFieldDefinition testDefinition = new DynamicLinkFieldDefinition();
+		testDefinition.setIncludeSelf(true);
+		assertThat(testDefinition.isIncludeSelf(), is(true));
+	}
 }

@@ -29,6 +29,7 @@ public class DynamicLinkFieldDefinition extends LinkFieldDefinition {
 	 * A predefined default of mgnl:page for the example use case above.
 	 */
 	private String targetRootNodeType =  NodeTypes.Page.NAME;
+	private boolean includeSelf = false;
 
 	public String getTargetRootNodeType() {
 		return targetRootNodeType;
@@ -37,4 +38,13 @@ public class DynamicLinkFieldDefinition extends LinkFieldDefinition {
 	public void setTargetRootNodeType(String targetRootNodeType) {
 		this.targetRootNodeType = targetRootNodeType;
 	}
+
+	public boolean isIncludeSelf() {
+		return includeSelf;
+	}
+
+	public void setIncludeSelf(boolean includeSelf) {
+		this.includeSelf = includeSelf;
+	}
+
 }
