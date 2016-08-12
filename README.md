@@ -1,6 +1,6 @@
 # dynamic-link-field-module
 ##Description
-This modules adds an additional link field that can dynamically discover the nodes it makes available to an editor to select from.
+This module adds an additional link field that can dynamically discover the nodes it makes available to an editor to select from.
 
 The primary use case for this field is where an editor is configuring a page that should only link to content from a certain area of the website. For example, a category landing page which highlights items beneath it in the website tree.
 
